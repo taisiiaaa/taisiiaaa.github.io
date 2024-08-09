@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHLUR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="scent-page">
+        
+        <h1 class="popular-scents">POPULAR SCENTS</h1>
+
+        <div class="scents-list" onmouseout="hideContent()">
+            <p onmouseover="showContent('strawberry')" data-desc="strawberry">strawberry letter</p>
+            <p onmouseover="showContent('vanilla')" data-desc="vanilla">vanilla skin</p>
+            <p onmouseover="showContent('soft')" data-desc="soft-spot">soft spot</p>
+            <p onmouseover="showContent('somebody')" data-desc="somebody-wood">somebody wood</p>
+            <p onmouseover="showContent('apricot')" data-desc="apricot">apricot privée</p>
+            <p onmouseover="showContent('solar')" data-desc="solar">solar power</p>
+        </div>
+
+        <div id="image-container"></div>
+        <div id="text-container"></div>
+
+
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

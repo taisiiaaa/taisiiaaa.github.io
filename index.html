@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PHLUR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Підключення Montserrat -->
+</head>
+<body class="no-scroll">
+    <div class="container home-page">
+    <header class="header-home-page">
+        <div class="menu-icon">
+            <img src="c:\Users\Taisia\OneDrive\Рабочий стол\open.png" alt="Menu" id="menu-button">
+        </div>
+        <h1>PHLUR</h1>
+        <div class="icons">
+            <img class="icon search-icon" src="c:\Users\Taisia\OneDrive\Рабочий стол\search.png" alt="Search">
+            <img class="icon profile-icon" src="c:\Users\Taisia\OneDrive\Рабочий стол\profile.png" alt="User">
+            <img class="icon like-icon" src="c:\Users\Taisia\OneDrive\Рабочий стол\like.png" alt="Favorites">
+            <img class="icon basket-icon" src="c:\Users\Taisia\OneDrive\Рабочий стол\basket.png" alt="Cart">
+        </div>
+    </header>
+
+    <nav class="menu" id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#Blog">Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="slogan-section">
+        <div class="slogan-text">
+            <span>Transform your Aura</span>
+            <span>with</span>
+            <span class="every-spray">Every Spray</span>
+        </div>
+        <div class="decor-images">
+            <img src="c:\Users\Taisia\OneDrive\Рабочий стол\strawberry.png" alt="Strawberries" class="strawberry">
+            <img src="c:\Users\Taisia\OneDrive\Рабочий стол\flower.png" alt="Flowers" class="flower">
+        </div>
+        <div class="stars">
+            <img src="c:\Users\Taisia\OneDrive\Рабочий стол\stars.png" alt="Stars" class="stars1">
+            <img src="c:\Users\Taisia\OneDrive\Рабочий стол\stars2.png" alt="Stars" class="stars2">
+            <img src="c:\Users\Taisia\OneDrive\Рабочий стол\stars3.png" alt="Stars" class="stars3">
+            <img src="c:\Users\Taisia\OneDrive\Рабочий стол\stars4.png" alt="Stars" class="stars4">
+        </div>
+        <div class="description">
+            <p class="description p">Dive into the world of unique aromas with Phlur and discover the magic that will transform your day with every spray. Our unique compositions are created to highlight your individuality and spirits, making each moment special.</p>
+        </div>
+        <div class="container">
+        <div class="home-mists">
+            <img src="C:\Users\Taisia\OneDrive\Рабочий стол\images_phlur\homemists.png" alt="Body mists" class="perfume">
+        </div>
+    </div>
+    </div>
+</div>
+<script>
+    document.getElementById('menu-button').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+});
+</script>
+</body>
+</html>

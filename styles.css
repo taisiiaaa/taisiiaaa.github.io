@@ -1,0 +1,1950 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+body.scroll {
+    overflow: auto;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    font-family: 'Arimo', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.home-page {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #ff6666, #ffff66, #66ff66, #40ffa6);
+    overflow: hidden;
+}
+
+.catalogue-page {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #80ff66, #ffff66, #ffb066, #f344aa);
+    overflow: hidden;
+}
+
+.perfume-page {
+    width: 100%;
+    height: 400vh;
+    background: #E8BBBC;
+}
+
+.non-scrollable-content {
+    position: fixed;
+    width: 100%;
+    height: 30%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: #E8BBBC;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.non-scrollable-content1 {
+    position: fixed;
+    width: 385px;
+    height: 100%;
+    top: 250px;
+    left: 20px;
+    z-index: 3;
+    background: #E8BBBC;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.scrollable-products {
+    position: absolute;
+    margin-top: 260px; /* Start below the fixed header */
+    left: 0;
+    width: 100%;
+    height: 400vh; /* Fill the rest of the viewport */
+    overflow-y: auto; /* Enable scrolling */
+    background-color: #E8BBBC; /* Background color for the scrollable section */
+    padding-top: 10px; /* Optional padding for spacing */
+    z-index: 1;
+}
+
+
+.header-home-page {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #ff6666, #ffff66, #66ff66, #40ffa6);
+    position: relative;
+}
+
+.header-catalogue-page {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #80ff66, #ffff66, #ffb066, #f344aa);
+    position: relative;
+    margin-top: -12px;
+}
+
+.header-perfume-page {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #E8BBBC;
+    position: relative;
+    margin-top: -12px;
+}
+
+.breadcrumb {
+    margin-left: 46px;
+    font-size: 20px;
+}
+
+.breadcrumb-perfume {
+    margin-left: 46px;
+    font-size: 20px;
+}
+
+.home-color {
+    color: #B8146E;
+}
+
+.catalogue-color {
+    color: #000000;
+    font-weight: 300;
+}
+
+.catalogue-color-perfume {
+    color: #B8146E;
+}
+
+.perfume-color {
+    color: #000000;
+    font-weight: 300;
+}
+
+.menu-icon {
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-icon img {
+    width: 120px; /* Розмір іконки меню */
+}
+
+.menu {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background: #E8BBBC;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px; /* Inner padding */
+    display: none; /* Initially hidden */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 0;
+    padding: 5px 30px;
+    border-bottom: 1px solid #000; /* Line between buttons */
+    text-align: center;
+    font-weight: bold;
+}
+
+.menu ul li:last-child {
+    border-bottom: none; /* Remove line for last element */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    display: block;
+    padding: 5px 10px; /* Padding inside links */
+    transition: background 0.3s;
+}
+
+.menu ul li a:hover {
+    background: #E8BBBC;
+}
+
+
+/* Стили для секций */
+#home-section, #catalogue-section {
+    padding: 20px;
+    background-color: #f3e5f5;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 34px;
+    margin-left: auto;
+    margin-right: 400px;
+    position: relative;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Зменшення відстані між іконками */
+}
+
+.icon {
+    width: 120px; /* Однаковий розмір для всіх іконок */
+    height: 60px; /* Однаковий розмір для всіх іконок */
+}
+
+.search-icon {
+    margin-left: auto;
+    margin-right: -75px; /* Расстояние между лупой и профилем */
+}
+
+.profile-icon {
+    margin-left: auto;
+    margin-right: -75px; /* Расстояние между профилем и сердцем */
+}
+
+.like-icon {
+    margin-left: auto;
+    margin-right: -75px; /* Расстояние между сердцем и корзинкой */
+}
+
+/* Слоган секція */
+.slogan-section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+    margin-left: 5px;
+    width: 80%; /* Ширина секції */
+    margin-top: 5px; /* Відступ зверху */
+}
+
+.slogan-text {
+    background-color: #f3e5f5; /* Світло-бузковий фон */
+    padding: 3px 80px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: black;
+    margin: 0;
+    font-size: 60px; /* Розмір шрифту */
+    line-height: 1.4;
+}
+
+.slogan-text span {
+    display: block;
+}
+
+.every-spray {
+    margin-left: 200px; /* Зміщуємо рядок праворуч на 10px */
+}
+
+.decor-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.strawberry {
+    position: relative;
+    right: 5px; /* Зміщення праворуч на одну лінію з "Every Spray" */
+    bottom: 145px; /* Відступ від низу */
+    width: 200px; /* Розмір зображень полуниці та квітів */
+    height: auto;
+}
+
+.flower {
+    position: relative;
+    left: 370px; /* Зміщення ліворуч на одну лінію з "with" */
+    bottom: 205px; /* Відступ від низу */
+    width: 240px; /* Розмір зображень полуниці та квітів */
+    height: auto;
+}
+
+.stars1 {
+    display: flex;
+    justify-content: space-around;
+    width: 130px; /* Розмір зображень зірок */
+    height: auto;
+    position: relative;
+    left: 460px; /* Зміщення ліворуч на одну лінію з "with" */
+    bottom: 330px; /* Відступ від низу */
+}
+
+.stars2 {
+    display: flex;
+    justify-content: space-around;
+    width: 80px; /* Розмір зображень зірок */
+    height: auto;
+    position: relative;
+    left: 30px; /* Зміщення ліворуч на одну лінію з "with" */
+    bottom: 450px; /* Відступ від низу */
+}
+
+.stars3 {
+    display: flex;
+    justify-content: space-around;
+    width: 360px; /* Розмір зображень зірок */
+    height: auto;
+    position: relative;
+    left: 50px; /* Зміщення ліворуч на одну лінію з "with" */
+    bottom: 500px; /* Відступ від низу */
+}
+
+.stars4 {
+    display: flex;
+    justify-content: space-around;
+    width: 400px; /* Розмір зображень зірок */
+    height: auto;
+    position: relative;
+    left: 1px; /* Зміщення ліворуч на одну лінію з "with" */
+    bottom: 580px; /* Відступ від низу */
+}
+
+.description {
+    position: absolute;
+    top: 55px;
+    right: 55px;
+    width: 63%;
+    text-align: justify;
+    padding: 20px;
+    line-height: 1.4;
+}
+
+.description p {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+.home-mists {
+    display: flex;
+    justify-content: space-around;
+    left: 800px;
+    bottom: 1145px;
+    position: relative;
+}
+
+.perfume {
+    width: 725px;
+    height: auto;
+}
+
+.scroll-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+
+.scroll-content {
+    display: flex;
+    gap: 1000px;
+    margin-bottom: 250px;
+    margin-left: 2900px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-image {
+    width: 375px;
+    height: 450px;
+    border-radius: 46% 46% 0 0;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.slide-image {
+    width: 375px;
+    height: 450px;
+    border-radius: 46% 46% 0 0;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+    transform: opacity 0.3s ease-in-out;
+}
+
+
+
+.view-items {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 250px; /* Adjust width as needed */
+    height: auto;
+    cursor: pointer;
+}
+
+.frame {
+    flex: 0 0 auto;
+    width: 375px; /* Ширина рамки */
+    height: 450px; /* Висота рамки */
+    position: relative;
+    border: 1px solid black;
+    border-image: none;
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: transform 0.3s ease-in-out;
+    transform: opacity 0.3s ease-in-out;
+}
+
+.frame:hover,
+.frame:focus {
+    transform: scale(1.05); /* Масштабування зображення на 5% */
+}
+
+.frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Забезпечує покриття всього простору рамки без спотворення */
+    object-position: center;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+
+.category-text {
+    font-size: 150px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #4C105D;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    z-index: 3;
+  }
+
+  .category-text.left-candle {
+    left: -350px;
+  }
+  
+  .category-text.right-candle {
+    right: -330px;
+  }
+
+  .category-text.left-care {
+    left: -460px;
+  }
+  
+  .category-text.right-care {
+    right: -430px;
+  }
+
+
+  .category-text.left-mist {
+    left: -460px;
+  }
+  
+  .category-text.right-mist {
+    right: -360px;
+  }
+
+
+  .category-text.left-perfume {
+    left: -430px;
+  }
+  
+  .category-text.right-perfume {
+    right: -370px;
+  }
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Perfume Page */
+
+.sort-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    background: #E8BBBC;
+    padding: 15px;
+    border: 2px solid #000;
+    width: 600px; /* Встановіть необхідну ширину */
+    margin-left: auto;
+    margin-right: 70px;
+    position: relative;
+}
+
+.sort-by {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    margin-right: 10px; /* Відступ справа */
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.sort-filter span {
+    font-weight:bolder;
+    margin-right: 10px;
+}
+
+.sort-filter select {
+    padding: 5px;
+    border: none;
+    background: none;
+    color: #B8146E;
+    font-size: 28px;
+    font-weight: 300;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 20px; /* Встановлення відступу зліва */
+    -webkit-appearance: none; /* Прибирає стандартну галочку у вебкит браузерах */
+    -moz-appearance: none; /* Прибирає стандартну галочку у Firefox */
+    appearance: none; /* Прибирає стандартну галочку */
+    position: absolute;
+    right: 100px; /* Налаштування правого відступу для вирівнювання */
+}
+
+.sort-filter select:focus {
+    outline: 2px solid #E8BBBC; /* Колір рамочки при фокусі */
+}
+
+.sort-filter option {
+    background-color: #E8BBBC; /* Колір панелей */
+    color: #B8146E; /* Колір тексту опцій */
+}
+
+/* Зміна кольору при виборі опції */
+.sort-filter option:checked {
+    background-color: #B8146E; /* Колір вибраної опції */
+    color: #E8BBBC; /* Колір тексту вибраної опції */
+}
+
+.sort-filter::before {
+    content: '|'; /* Custom arrow */
+    color: #B8146E;
+    font-size: 36px;
+    font-weight: 300;
+    position: absolute;
+    right: 450px;
+    pointer-events: none;
+}
+
+.sort-filter::after {
+    content: '↓'; /* Custom arrow */
+    color: #B8146E;
+    font-size: 36px;
+    font-weight: 300;
+    position: absolute;
+    right: 20px;
+    pointer-events: none;
+}
+
+.sort-dropdown {
+    position: relative;
+}
+
+
+.sort-dropdown .options {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #E8BBBC;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-top: -12px;
+    z-index: 1;
+}
+
+.sort-dropdown .option {
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background: #E8BBBC;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+}
+
+.sort-dropdown .option:hover {
+    background-color: #E8BBBC;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 49px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.filter-title {
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filter-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Вирівнювання по низу тексту */
+    width: 250px; /* Встановіть ширину лінії */
+    height: 2px; /* Товщина лінії */
+    background-color: #000; /* Колір лінії */
+}
+
+.plus-icon1, .plus-icon2, .plus-icon3 {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 400;
+    color: #B8146E;
+    cursor: pointer;
+    position: relative;
+    cursor: pointer;
+}
+
+.plus-icon1 {
+    margin-left: 250px;
+}
+
+.plus-icon2 {
+    margin-left: 165px;
+}
+
+.plus-icon3 {
+    margin-left: 232px;
+}
+
+.filter-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border: 1px solid #E8BBBC;
+    background: #E8BBBC;
+    margin-bottom: 10px;
+    position: relative;
+    border-bottom: 1px solid #E8BBBC;
+    width: 22%;
+    left: 50;
+}
+
+.filter-options {
+    display: none;
+    gap: 10px;
+    background: #E8BBBC;
+    padding: 10px;
+    border: 2px solid #000000;
+    position: absolute;
+    top: 60px;
+    left: 15;
+    width: 400%;
+    z-index: 1;
+}
+
+.filter-options span {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #E8BBBC;
+    background: #8f6162;
+}
+
+
+.filter-options button {
+    background: none;
+    border: 1px solid #E8BBBC;
+    color: #B8146E;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filter-options button:hover {
+    background-color: #B8146E;
+    color: #E8BBBC;
+}
+
+/* Стилі для секції продуктів */
+.products {
+    display: flex;
+    justify-content: space-between; /* Рівномірний розподіл продуктів */
+    flex-wrap: wrap; /* Перехід продуктів на новий рядок при зменшенні ширини */
+    max-width: 1050px; /* Максимальна ширина для контролю інтервалу */
+    padding: 20px 0; /* Відступи всередині контейнера */
+    margin: 0 auto;
+    transform: translateX(180px); /* Перемістити всі продукти праворуч */
+}
+
+.product-item {
+    width: 30%; /* Фіксована ширина продукту */
+    text-align: center; /* Вирівнювання тексту по центру */
+    position: relative; /* Відносне позиціонування для внутрішніх елементів */
+    margin: 0 5px; /* Відступи між продуктами */
+    padding: 10px; /* Відступи для створення простору між зображенням і текстом */
+    box-sizing: border-box; /* Включити padding у загальну ширину */
+}
+
+.strawberry-letter, .mood-ring, .tangerine-boy {
+    width: 335px; /* Встановлена ширина */
+    height: 395px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    margin-top: -20px; /* Підняти зображення вище */
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    padding: 5px;
+    position: relative;
+}
+
+.strawberry-letter {
+    width: 335px;
+    height: 395px;
+    border-radius: 46% 46% 0 0;
+    border: 1px solid #000;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    margin-top: -20px;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+    transition: opacity 0.3s ease-in-out; /* Додаємо плавний перехід для opacity */
+}
+
+.mood-ring {
+    width: 335px;
+    height: 395px;
+    border-radius: 46% 46% 0 0;
+    border: 1px solid #000;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    margin-top: -20px;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+    transition: opacity 0.3s ease-in-out; /* Додаємо плавний перехід для opacity */
+}
+
+.tangerine-boy {
+    width: 335px;
+    height: 395px;
+    border-radius: 46% 46% 0 0;
+    border: 1px solid #000;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    margin-top: -20px;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+    transition: opacity 0.3s ease-in-out; /* Додаємо плавний перехід для opacity */
+}
+
+.hover-strawberry-letter {
+    width: 335px;
+    height: 395px;
+    border-radius: 46% 46% 0 0;
+    border: 1px solid #000;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    margin-top: -260px;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+}
+
+/* Приховуємо друге зображення за замовчуванням */
+.hover-strawberry-letter {
+    position: absolute; /* Абсолютне позиціонування над першим зображенням */
+    margin-top: -415px;
+    opacity: 0; /* Початково невидиме */
+    z-index: 1; /* Задати, щоб було над базовим зображенням */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hover-mood-ring {
+    width: 335px;
+    height: 395px;
+    border-radius: 46% 46% 0 0;
+    border: 1px solid #000;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    margin-top: -260px;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+}
+
+.hover-mood-ring {
+    position: absolute; /* Абсолютне позиціонування над першим зображенням */
+    margin-top: -415px;
+    opacity: 0; /* Початково невидиме */
+    z-index: 1; /* Задати, щоб було над базовим зображенням */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hover-tangerine-boy {
+    width: 335px;
+    height: 395px;
+    border-radius: 46% 46% 0 0;
+    border: 1px solid #000;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    margin-top: -260px;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+}
+
+.hover-tangerine-boy {
+    position: absolute; /* Абсолютне позиціонування над першим зображенням */
+    margin-top: -415px;
+    opacity: 0; /* Початково невидиме */
+    z-index: 1; /* Задати, щоб було над базовим зображенням */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* При наведенні показуємо друге зображення */
+.product-item:hover .hover-strawberry-letter {
+    opacity: 1; /* Показує друге зображення */
+    z-index: 2;
+}
+
+/* При наведенні ховаємо перше зображення */
+.product-item:hover .strawberry-letter {
+    opacity: 0; /* Ховаємо перше зображення */
+}
+
+/* При наведенні показуємо друге зображення */
+.product-item:hover .hover-mood-ring {
+    opacity: 1; /* Показує друге зображення */
+    z-index: 2;
+}
+
+/* При наведенні ховаємо перше зображення */
+.product-item:hover .mood-ring {
+    opacity: 0; /* Ховаємо перше зображення */
+}
+
+/* При наведенні показуємо друге зображення */
+.product-item:hover .hover-tangerine-boy {
+    opacity: 1; /* Показує друге зображення */
+    z-index: 2;
+}
+
+/* При наведенні ховаємо перше зображення */
+.product-item:hover .tangerine-boy {
+    opacity: 0; /* Ховаємо перше зображення */
+}
+
+.h31, .h32, .h33 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 0; /* Відступ зверху та знизу */
+    text-align: start; /* Вирівнювання по центру */
+    width: 100%;
+}
+
+.psize1, .psize2, .psize3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px 0; /* Відступи зверху та знизу */
+    text-align: start; /* Вирівнювання по центру */
+    width: 100%;
+}
+
+.price1, .price2, .price3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 10px 0; /* Відступ зверху та знизу */
+    text-align: start; /* Вирівнювання по центру */
+    width: 100%;
+}       
+
+   .why-choose {
+     margin: 20px 0;
+     background: #E8BBBC;
+     padding: 20px;
+    }
+    
+    .why-choose h2 {
+     text-align: justify;
+     margin-top: -20px;
+     margin-left: 560px;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 24px;
+     background: #E8BBBC;
+    }
+    
+    .why-choose p {
+     text-align: justify;
+     margin-top: 20px;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 24px;
+     margin-left: 420px;
+     margin-bottom: 40px;
+     width: 70%;
+     gap: 20px;
+     background: #E8BBBC;
+    }
+
+    /* Стиль для заголовка з декоративною паличкою */
+.heading-with-line {
+    position: relative; /* Відносне позиціонування для псевдоелементів */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left; /* Вирівнювання по лівому краю */
+    margin: 20px 0;
+    padding-left: 5px; /* Відступ, щоб паличка не перекривала текст */
+    color: #000; /* Колір тексту */
+}
+
+.heading-with-line::before {
+    content: ''; /* Пустий контент для псевдоелемента */
+    position: absolute;
+    left: 0;
+    top: 50%; /* Вертикальне вирівнювання по центру */
+    transform: translateY(-50%); /* Вирівнювання по центру */
+    height: 3px; /* Товщина палички */
+    width: 120px; /* Довжина палички */
+    margin-left: -140px;
+    background-color: #000; /* Колір палички */
+}
+
+.products2 {
+    display: flex;
+    justify-content: space-between; /* Рівномірний розподіл продуктів */
+    flex-wrap: wrap; /* Перехід продуктів на новий рядок при зменшенні ширини */
+}
+
+.product-item2 {
+    text-align: center; /* Вирівнювання тексту по центру */
+    position: relative; /* Відносне позиціонування для внутрішніх елементів */
+    margin: 0 5px; /* Відступи між продуктами */
+    padding: 10px; /* Відступи для створення простору між зображенням і текстом */
+    box-sizing: border-box; /* Включити padding у загальну ширину */
+}
+
+.solar-power {
+    width: 635px; /* Встановлена ширина */
+    height: 695px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    margin-top: -60px; /* Підняти зображення вище */
+    margin-left: 425px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    padding: 5px;
+    position: relative;
+    transition: opacity 0.3s ease-in-out; /* Додаємо плавний перехід для opacity */
+}
+
+.hover-solar-power {
+    width: 635px;
+    height: 695px;
+    border-radius: 46% 46% 0 0;
+    border: 1px solid #000;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    margin-top: -715px;
+    margin-left: 425px;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+}
+
+/* Приховуємо друге зображення за замовчуванням */
+.hover-solar-power {
+    position: absolute; /* Абсолютне позиціонування над першим зображенням */
+    margin-left: 425px;
+    opacity: 0; /* Початково невидиме */
+    z-index: 1; /* Задати, щоб було над базовим зображенням */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* При наведенні показуємо друге зображення */
+.product-item2:hover .hover-solar-power {
+    opacity: 1; /* Показує друге зображення */
+    z-index: 2;
+}
+
+/* При наведенні ховаємо перше зображення */
+.product-item2:hover .solar-power {
+    opacity: 0; /* Ховаємо перше зображення */
+}
+
+
+.tangerine-boy2 {
+    width: 305px; /* Встановлена ширина */
+    height: 365px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    margin-top: -60px; /* Підняти зображення вище */
+    margin-right: 25px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    padding: 5px;
+    position: relative;
+    transition: opacity 0.3s ease-in-out; /* Додаємо плавний перехід для opacity */
+}
+
+.hover-tangerine-boy2 {
+    width: 305px;
+    height: 365px;
+    border-radius: 46% 46% 0 0;
+    border: 1px solid #000;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    margin-top: -385px;
+    margin-right: 25px;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+}
+
+/* Приховуємо друге зображення за замовчуванням */
+.hover-tangerine-boy2 {
+    position: absolute; /* Абсолютне позиціонування над першим зображенням */
+    margin-right: 25px;
+    opacity: 0; /* Початково невидиме */
+    z-index: 1; /* Задати, щоб було над базовим зображенням */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* При наведенні показуємо друге зображення */
+.product-item2:hover .hover-tangerine-boy2 {
+    opacity: 1; /* Показує друге зображення */
+    z-index: 2;
+}
+
+/* При наведенні ховаємо перше зображення */
+.product-item2:hover .tangerine-boy2 {
+    opacity: 0; /* Ховаємо перше зображення */
+}
+
+.h34, .h35 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 0; /* Відступ зверху та знизу */
+    text-align: start; /* Вирівнювання по центру */
+    width: 100%;
+}
+
+.h34 {
+    margin-left: 425px;
+}
+
+.psize4, .psize5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px 0; /* Відступи зверху та знизу */
+    text-align: start; /* Вирівнювання по центру */
+    width: 100%;
+}
+
+.psize4 {
+    margin-left: 425px;
+}
+
+.price4, .price5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 10px 0; /* Відступ зверху та знизу */
+    text-align: start; /* Вирівнювання по центру */
+    width: 100%;
+}
+
+.price4 {
+    margin-left: 425px;
+}
+
+.products3 {
+    display: flex;
+    justify-content: space-between; /* Рівномірний розподіл продуктів */
+    flex-wrap: wrap; /* Перехід продуктів на новий рядок при зменшенні ширини */
+}
+
+.product-item3 {
+    text-align: center; /* Вирівнювання тексту по центру */
+    position: relative; /* Відносне позиціонування для внутрішніх елементів */
+    margin: 0 5px; /* Відступи між продуктами */
+    padding: 10px; /* Відступи для створення простору між зображенням і текстом */
+    box-sizing: border-box; /* Включити padding у загальну ширину */
+}
+
+.mood-ring2 {
+    width: 305px; /* Встановлена ширина */
+    height: 365px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    margin-top: 0px; /* Підняти зображення вище */
+    margin-left: 425px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    padding: 5px;
+    position: relative;
+    transition: opacity 0.3s ease-in-out; /* Додаємо плавний перехід для opacity */
+}
+
+.hover-mood-ring2 {
+    width: 305px;
+    height: 365px;
+    border-radius: 46% 46% 0 0;
+    border: 1px solid #000;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    margin-top: -385px;
+    margin-left: 425px;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+}
+
+/* Приховуємо друге зображення за замовчуванням */
+.hover-mood-ring2 {
+    position: absolute; /* Абсолютне позиціонування над першим зображенням */
+    margin-left: 425px;
+    opacity: 0; /* Початково невидиме */
+    z-index: 1; /* Задати, щоб було над базовим зображенням */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* При наведенні показуємо друге зображення */
+.product-item3:hover .hover-mood-ring2 {
+    opacity: 1; /* Показує друге зображення */
+    z-index: 2;
+}
+
+/* При наведенні ховаємо перше зображення */
+.product-item3:hover .mood-ring2 {
+    opacity: 0; /* Ховаємо перше зображення */
+}
+
+.strawberry-letter2 {
+    width: 635px; /* Встановлена ширина */
+    height: 695px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    margin-top: 0px; /* Підняти зображення вище */
+    margin-right: 25px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    padding: 5px;
+    position: relative;
+    transition: opacity 0.3s ease-in-out; /* Додаємо плавний перехід для opacity */
+}
+
+.hover-strawberry-letter2 {
+    width: 635px;
+    height: 695px;
+    border-radius: 46% 46% 0 0;
+    border: 1px solid #000;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    margin-top: -715px;
+    margin-right: 25px;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+}
+
+/* Приховуємо друге зображення за замовчуванням */
+.hover-strawberry-letter2 {
+    position: absolute; /* Абсолютне позиціонування над першим зображенням */
+    margin-right: 25px;
+    opacity: 0; /* Початково невидиме */
+    z-index: 1; /* Задати, щоб було над базовим зображенням */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* При наведенні показуємо друге зображення */
+.product-item3:hover .hover-strawberry-letter2 {
+    opacity: 1; /* Показує друге зображення */
+    z-index: 2;
+}
+
+/* При наведенні ховаємо перше зображення */
+.product-item3:hover .strawberry-letter2 {
+    opacity: 0; /* Ховаємо перше зображення */
+}
+
+.h36, .h37 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 0; /* Відступ зверху та знизу */
+    text-align: start; /* Вирівнювання по центру */
+    width: 100%;
+}
+
+.h36 {
+    margin-left: 425px;
+}
+
+.psize6, .psize7 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px 0; /* Відступи зверху та знизу */
+    text-align: start; /* Вирівнювання по центру */
+    width: 100%;
+}
+
+.psize6 {
+    margin-left: 425px;
+}
+
+.price6, .price7 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 10px 0; /* Відступ зверху та знизу */
+    text-align: start; /* Вирівнювання по центру */
+    width: 100%;
+}
+
+.price6 {
+    margin-left: 425px;
+}
+
+/* About Page */
+
+.about-page {
+    width: 100%;
+    height: 100vh;
+    background: #D0C6F6;
+    overflow: hidden;
+}
+
+.first {
+    color: #000000; /* Колір тексту */
+    font-size: 72px; /* Розмір шрифту для заголовка */
+    font-family: 'Ysabeau SC', sans-serif;
+    font-weight: 600;
+    top: 30px;
+    left: 50px;
+    position: relative;
+}
+
+header p {
+    color: #000000; /* Колір тексту */
+    font-size: 18px; /* Розмір шрифту для параграфа */
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+    line-height: 1.6; /* Висота лінії */
+}
+
+/* Стилі для блоків з характеристиками */
+.feature {
+    margin-top: 30px;
+    display: flex; /* Використання flexbox для розташування елементів у ряд */
+    align-items: center; /* Вирівнювання елементів по центру по вертикалі */
+}
+
+.feature p {
+    flex: 1; /* Займати всю доступну ширину */
+    color: #000000; /* Колір тексту */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; /* Розмір шрифту */
+}
+
+.headline {
+    color: #992419; /* Колір тексту */
+    font-size: 21px; /* Розмір шрифту для параграфа */
+    font-family: 'Arimo', sans-serif;
+    font-weight: 600;
+    width: 41%;
+    margin-top: 30px;
+    margin-left: 50px;
+    position: relative;
+}
+
+.aboutcare4 {
+    width: 275px; /* Встановлена ширина */
+    height: 325px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -170px; /* Підняти зображення вище */
+    margin-right: 25px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.aboutperfume2 {
+    width: 225px; /* Встановлена ширина */
+    height: 265px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -700px; /* Підняти зображення вище */
+    margin-right: 340px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.paragraph {
+    width: 20%;
+    font-size: 14.4px;
+    text-align: justify;
+    margin-left: 625px;
+    margin-top: -300px;
+    position: relative;
+}
+
+.aboutcandle2 {
+    width: 325px; /* Встановлена ширина */
+    height: 375px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -870px; /* Підняти зображення вище */
+    margin-left: 50px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.paragraph1 {
+    width: 40%;
+    font-size: 14.4px;
+    text-align: justify;
+    margin-left: 405px;
+    top: -600px;
+    position: relative;
+}
+
+.headline1 {
+    color: #992419; /* Колір тексту */
+    font-size: 21px; /* Розмір шрифту для параграфа */
+    font-family: 'Arimo', sans-serif;
+    text-align: right;
+    font-weight: 600;
+    width: 36%;
+    margin-top: -950px;
+    margin-left: 455px; 
+    position: relative;
+}
+
+.read-more {
+    width: 425px; /* Встановлена ширина */
+    height: auto; /* Встановлена висота */
+    margin-left: 1155px;
+    position: absolute;
+    bottom: -50px;
+    cursor: pointer;
+}
+
+/* Essence Page */
+
+.essence-page {
+    width: 100%;
+    height: 310vh;
+    background: #D0C6F6;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.header-essence-page {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #D0C6F6;
+    position: relative;
+    margin-top: -12px;
+}
+
+.abouthome-color {
+    color: #992419;
+}
+
+.about-color {
+    font-weight: 300;
+    color: #000;
+}
+
+.essencepage-title {
+    color: #000000; /* Колір тексту */
+    font-size: 72px; /* Розмір шрифту для заголовка */
+    font-family: 'Ysabeau SC', sans-serif;
+    font-weight: 600;
+    top: 10px;
+    left: 65px;
+    position: relative;
+}
+
+.paragraph2 {
+    width: 45%;
+    font-size: 14.4px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    margin-left: 755px;
+    top: 200px;
+    position: relative;
+}
+
+.aboutcandle3 {
+    width: 225px; /* Встановлена ширина */
+    height: 265px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -200px; /* Підняти зображення вище */
+    margin-right: 60px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.aboutperfume3 {
+    width: 325px; /* Встановлена ширина */
+    height: 375px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -340px; /* Підняти зображення вище */
+    margin-left: 350px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.aboutcandle1 {
+    width: 225px; /* Встановлена ширина */
+    height: 265px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -550px; /* Підняти зображення вище */
+    margin-left: 60px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.essencepage-title1 {
+    color: #000000; /* Колір тексту */
+    font-size: 72px; /* Розмір шрифту для заголовка */
+    font-family: 'Ysabeau SC', sans-serif;
+    font-weight: 600;
+    top: -450px;
+    left: 65px;
+    position: relative;
+}
+
+.aboutmist1 {
+    width: 325px; /* Встановлена ширина */
+    height: 375px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -530px; /* Підняти зображення вище */
+    margin-right: 60px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.aboutcare2 {
+    width: 175px; /* Встановлена ширина */
+    height: 205px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -755px; /* Підняти зображення вище */
+    margin-right: 460px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.aboutcare3 {
+    width: 225px; /* Встановлена ширина */
+    height: 265px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -750px; /* Підняти зображення вище */
+    margin-right: 60px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.aboutcare1 {
+    width: 225px; /* Встановлена ширина */
+    height: 265px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -1035px; /* Підняти зображення вище */
+    margin-right: 360px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.paragraph3 {
+    width: 35%;
+    font-size: 14.4px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    margin-left: 305px;
+    top: -1350px;
+    position: relative;
+}
+
+.essencepage-title2 {
+    color: #000000; /* Колір тексту */
+    font-size: 72px; /* Розмір шрифту для заголовка */
+    font-family: 'Ysabeau SC', sans-serif;
+    font-weight: 600;
+    top: -1000px;
+    left: 995px;
+    position: relative;
+}
+
+.aboutmist2 {
+    width: 175px; /* Встановлена ширина */
+    height: 205px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -1000px; /* Підняти зображення вище */
+    margin-right: 65px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.aboutperfume1 {
+    width: 175px; /* Встановлена ширина */
+    height: 205px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -1300px; /* Підняти зображення вище */
+    margin-left: 65px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.aboutcandle4 {
+    width: 225px; /* Встановлена ширина */
+    height: 265px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -1475px; /* Підняти зображення вище */
+    margin-left: 300px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.aboutmist3 {
+    width: 325px; /* Встановлена ширина */
+    height: 375px; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -1500px; /* Підняти зображення вище */
+    margin-left: 40px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.paragraph4 {
+    width: 30%;
+    font-size: 14.4px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    margin-left: 805px;
+    top: -1825px;
+    position: relative;
+}
+
+.abstract3 {
+    width: 180px; /* Встановлена ширина */
+    height: auto; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -3830px; /* Підняти зображення вище */
+    margin-left: 40px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.abstract6 {
+    width: 180px; /* Встановлена ширина */
+    height: auto; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -3730px; /* Підняти зображення вище */
+    margin-left: 940px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.abstract7 {
+    width: 280px; /* Встановлена ширина */
+    height: auto; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -3700px; /* Підняти зображення вище */
+    margin-left: 540px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.abstract5 {
+    width: 230px; /* Встановлена ширина */
+    height: auto; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -3550px; /* Підняти зображення вище */
+    margin-left: 40px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.abstract4 {
+    width: 250px; /* Встановлена ширина */
+    height: auto; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -3600px; /* Підняти зображення вище */
+    margin-left: 640px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.abstract1 {
+    width: 280px; /* Встановлена ширина */
+    height: auto; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -3570px; /* Підняти зображення вище */
+    margin-left: 940px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.abstract2 {
+    width: 280px; /* Встановлена ширина */
+    height: auto; /* Встановлена висота */
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    display: block;
+    margin: 20px auto; /* Центрування зображення */
+    top: -3600px; /* Підняти зображення вище */
+    margin-left: 440px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+.cursor {
+    width: 90px; /* Встановлена ширина */
+    height: auto; /* Встановлена висота */
+    object-fit: cover;
+    margin: 20px auto; /* Центрування зображення */
+    top: -5400px; /* Підняти зображення вище */
+    margin-left: 550px;
+    box-sizing: border-box; /* Включити border у загальну ширину */
+    position: relative;
+}
+
+@keyframes pulse-animation {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .cursor {
+      display: inline-block;
+      animation: pulse-animation 1.5s infinite; /* Пульсація кожні 2 секунди */
+  }
+
+  /* Scent Page */
+
+  #image-container {
+    position: absolute;
+    top: 225px;
+    left: 620px;
+    width: 325px;
+    height: 375px;
+    border-radius: 46% 46% 0 0; /* Арочна рамка */
+    border: 1px solid #000; /* Чорна рамка */
+    padding: 5px;
+    object-fit: cover;
+    display: none;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    z-index: 1; /* Задній план */
+}
+
+#text-container {
+    position: absolute;
+    text-align: justify;
+    top: 325px;
+    left: 1170px; /* Відступ від контейнера зображення */
+    width: 175px;
+    height: 375px;
+    display: none;
+    z-index: 2; /* На передньому плані */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14.4px;
+    color: #000000;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.scents-list {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scents-list p {
+    font-family: 'Ysabeau SC', serif;
+    font-size: 64px;
+    color: #000000;
+    cursor: pointer;
+    letter-spacing: 8px;
+    z-index: 2; /* Наведення з текстом поверх зображення */
+    padding: 10px;
+    margin: 0;
+    position: relative;
+    transition: color 0.3s ease, font-size 0.3s ease; /* Додатковий ефект для взаємодії */
+}
+
+.scents-list p:hover {
+    color: #992419; /* Зміна кольору на червоний */
+    font-size: 70px; /* Збільшення шрифту на 6 px */
+    font-weight: 500;
+}
+
+.scents-list p:hover:after {
+    content: '';
+    display: block;
+    width: 100px; /* Довжина лінії */
+    height: 2px; /* Висота лінії */
+    background-color: #000000; /* Колір лінії */
+    position: absolute;
+    left: -100px; /* Відступ лінії зліва від тексту */
+    top: 65px;
+}
+
+.scent-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #D0C6F6; /* Фіолетовий фон */
+}
+
+.popular-scents {
+    font-family: 'Roboto', sans-serif;
+    font-size: 21.1px;
+    font-weight: 700;
+    color: #000000; /* A dark blue color for headings */
+    text-align: center;
+    position: relative;
+    left: -900px;
+    top: -10px;
+}
+
+.descriptionp {
+    display: none; /* Hide all descriptions by default */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    color: #000000;
+    margin-top: 0;
+    opacity: 0; /* Start with 0 opacity for smooth transition */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    text-align: start;
+    line-height: 1.4;
+    letter-spacing: normal;
+    word-break: break-word;
+}
+
+/* Display corresponding description on hover */
+.scents-list div:hover .descriptionp {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #000000;
+    margin-top: 0;
+    width: 20%;
+    position: absolute;
+    text-align: start;
+    z-index: 1;
+    right: -1165px;
+    display: block; /* Make the paragraph visible */
+    opacity: 1; /* Fade it in */
+}
+
+
+/* Показати відповідний опис при наведенні */
+.scents-list p[data-desc="strawberry"]:hover ~ .scent-descriptions #strawberry,
+.scents-list p[data-desc="vanilla"]:hover ~ .scent-descriptions #vanilla,
+.scents-list p[data-desc="soft-spot"]:hover ~ .scent-descriptions #soft-spot,
+.scents-list p[data-desc="somebody-wood"]:hover ~ .scent-descriptions #somebody-wood,
+.scents-list p[data-desc="apricot"]:hover ~ .scent-descriptions #apricot,
+.scents-list p[data-desc="solar"]:hover ~ .scent-descriptions #solar {
+    display: block;
+    opacity: 1;
+}
+
+#text-container::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px; /* Довжина лінії */
+    height: 1px; /* Висота лінії */
+    background-color: #000000; /* Колір лінії */
+    margin-right: 10px; /* Відступ між лінією та текстом */
+}
+
